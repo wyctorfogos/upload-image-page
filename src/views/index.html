@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Upload images</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="icon" href="../../images/icon.png">
 </head>
 <body>
-    <h1 id="title">Upload images</h1>
-    <img id="image" src="../../images/icon.png">
-    <div class="submit">
-        <label for="submitImage"></label><br>
-        <input type="file" id="fileInput" name="fileInput" accept="image/*" required><br><br>
-    </div>
-    
+    <h1 id="title">Upload Images</h1>
+    <img id="image" src="../../images/icon.png" alt="Page Icon">
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="fileInput">Select an image to upload:</label><br>
+            <input type="file" id="fileInput" name="fileInput" accept="image/*" required><br><br>
+        </div>
+        
+        <div class="submit">
+            <input type="submit" id="submitImage" name="submitImage" value="Upload Image">
+        </div>
+    </form>
 </body>
 </html>
